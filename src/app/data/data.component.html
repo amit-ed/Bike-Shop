@@ -1,0 +1,19 @@
+<table datatable class="row-border hover">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Brand</th>
+    <th>Price</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let bike of bikes" (click) = "onClick(bike)" [class.selected]="bike === selectedBike">
+    <td>{{bike.id}}</td>
+    <td>{{bike.brand}}</td>
+    <td>{{bike.price}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<br>
+<app-bike-details [bike]="selectedBike"></app-bike-details>

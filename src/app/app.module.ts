@@ -7,6 +7,7 @@ import { BikeDetailsComponent } from './bike-details/bike-details.component';
 import {FormsModule} from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AnalysisComponent } from './analysis/analysis.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     DataComponent,
     BikeDetailsComponent,
     NavbarComponent,
+    AnalysisComponent,
   ],
   imports: [
     BrowserModule, DataTablesModule, FormsModule, AppRoutingModule

@@ -22,7 +22,14 @@ export class DataComponent {
     this.bikeService.getBikes().subscribe(bikes => (this.bikes = bikes));
   }
 
-  onClick(bike : Bike) {
+  selectBike(bike : Bike) {
     this.selectedBike = bike;
+  }
+
+  removeSelected()
+  {
+    //this.bikes = this.bikes.filter(bike => bike !== this.selectedBike);
+    this.bikeService.removeBike(this.selectedBike.id);
+    this.getBikes();
   }
 }

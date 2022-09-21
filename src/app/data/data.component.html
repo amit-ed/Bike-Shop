@@ -1,3 +1,5 @@
+
+<button *ngIf="selectedBike" (click)="removeSelected()">Remove</button>
 <table datatable class="row-border hover">
   <thead>
   <tr>
@@ -7,7 +9,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let bike of bikes" (click) = "onClick(bike)" [class.selected]="bike === selectedBike">
+  <tr *ngFor="let bike of bikes" (click) = "selectBike(bike)" [class.selected]="bike === selectedBike">
     <td>{{bike.id}}</td>
     <td>{{bike.brand}}</td>
     <td>{{bike.price}}</td>

@@ -1,10 +1,16 @@
-export interface Bike {
-  id: number;
-  brand: string;
-  price: number;
+export class Bike {
+  id !: number;
+  brand !: string;
+  price !: number;
+  // copy(bike : Bike)
+  // {
+  //   this.id = bike.id;
+  //   this.brand = bike.brand;
+  //   this.price = bike.price;
+  // }
 }
 
-export const bikes = [
+export let bikes = [
   {
     id: 1,
     brand: 'Yakuza',

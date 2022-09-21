@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import { Bike } from "../bikes";
+import {BikeService} from "../bike.service";
 
 @Component({
   selector: 'app-bike-details',
@@ -8,4 +9,11 @@ import { Bike } from "../bikes";
 })
 export class BikeDetailsComponent {
   @Input() bike !: Bike;
+
+  constructor(private bikeService : BikeService) {}
+
+  saveBike()
+  {
+    //this.bikeService.updateBike(this.bike, )
+  }
 }
